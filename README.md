@@ -21,27 +21,6 @@
   </a>
 </p>
 
-## Workflow
-
-- **Load file** – Read .eml files from the 'eml' directory.
-- **Parse file** – Extract from, subject, and body.
-- **Tokenization** – Tokenize the email content and calculate its token count.
-- **Context Validation** – Check whether the content fits within the model's context limit.
-  - If within the limit, use the original content.
-  - Otherwise, remove URLs and check the token count again.
-  - If it still exceeds the limit, discard the email.
-- **LLM Classification** – Send the prepared email content to Ollama's model for spam and phishing classification.
-- **Process Results** – Interpret classification results and display output.
-
-
-## Flowchart
-
-<p align="center">
-  <a href="artefact/flowchart.svg"
-    ><img alt="flowchart" src="artefact/flowchart.svg"
-  /></a>
-</p>
-
 ## Installation
 
 ```
@@ -71,6 +50,26 @@ mail-guardian/
 └── requirements.txt     # Dependencies
 ```
 
+## Flowchart
+
+<p align="center">
+  <a href="artefact/flowchart.svg"
+    ><img alt="flowchart" src="artefact/flowchart.svg"
+  /></a>
+</p>
+
+## Workflow
+
+- **Load file** – Read .eml files from the 'eml' directory.
+- **Parse file** – Extract from, subject, and body.
+- **Tokenization** – Tokenize the email content and calculate its token count.
+- **Context Validation** – Check whether the content fits within the model's context limit.
+  - If within the limit, use the original content.
+  - Otherwise, remove URLs and check the token count again.
+  - If it still exceeds the limit, discard the email.
+- **LLM Classification** – Send the prepared email content to Ollama's model for spam and phishing classification.
+- **Process Results** – Interpret classification results and display output.
+
 ## Result
 
 <p align="center">
@@ -78,4 +77,3 @@ mail-guardian/
     ><img alt="result" src="artefact/result.png"
   /></a>
 </p>
-
