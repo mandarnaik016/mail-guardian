@@ -38,7 +38,7 @@
 
 <p align="center">
   <a href="artefact/flowchart.svg"
-    ><img alt="workflow" src="artefact/flowchart.svg"
+    ><img alt="flowchart" src="artefact/flowchart.svg"
   /></a>
 </p>
 
@@ -54,7 +54,7 @@ ollama pull laya:latest
 python app.py
 ```
 
-## Project Structure
+## Structure
 
 ```
 mail-guardian/
@@ -70,4 +70,12 @@ mail-guardian/
 ├── app.py               # Application entry point
 └── requirements.txt     # Dependencies
 ```
+
+## Result
+
+<p align="center">
+  <a href="artefact/result.png"
+    ><img alt="result" src="artefact/result.png"
+  /></a>
+</p>
 
