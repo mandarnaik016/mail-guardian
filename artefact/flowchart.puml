@@ -1,0 +1,59 @@
+@startuml
+
+title Email Classification
+
+start
+
+:Load file;
+
+:Parse file;
+
+:Extract fields;
+note right
+  From
+  Subject
+  Body
+  URLs
+end note
+
+:Tokenize content;
+note left
+  Remove stop words
+end note
+
+:Calculate token;
+
+if (Is content within limit?) then (Y)
+    :Original content;
+else (N)
+    :Drop URLs;
+    if (Is content within limit?) then (Y)
+        :Modified content;
+    else (N)
+        :Discard content;
+     stop
+    endif
+endif
+
+:Prepare payload;
+
+:Send request;
+note right
+  Decision model (laya)
+end note
+
+:LLM inference;
+
+fork
+    :Spam;
+fork again
+    :Phishing;
+end fork
+
+:Get response;
+
+:Format output;
+
+stop
+
+@enduml

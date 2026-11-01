@@ -1,0 +1,13 @@
+.vscode/
+.ruff_cache/
+.ipynb_checkpoints/
+venv/
+__pycache__/
+*.py[cod]
+eml/*
+!eml/.gitkeep
+logs/*
+!logs/.gitkeep
+*.ipynb
+*.py.txt
+other/CEAS_08.csv.zip
