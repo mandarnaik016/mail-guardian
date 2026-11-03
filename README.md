@@ -4,7 +4,7 @@
   /></a>
 </p>
 
-<h1 align="center">Email Guardian</h1>
+<h1 align="center">Mail Guardian</h1>
 
 <p align="center">
   Local LLM-powered email classification for spam and phishing detection using Ollama.
